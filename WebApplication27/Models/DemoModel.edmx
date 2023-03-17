@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Pay">
+          <Key>
+            <PropertyRef Name="交易序號" />
+          </Key>
+          <Property Name="交易序號" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="醫療機構名稱" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="就醫帳號" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="手機" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="姓名" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="身分證號碼" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="出生年" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="科別" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="系統別" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="時段" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="金額" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="繳費日期" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="繳費方式" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="信用卡卡號" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="信用卡訂單編號" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="信用卡授權碼" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DemoModelStoreContainer">
+          <EntitySet Name="Pay" EntityType="Self.Pay" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pay">
+          <Key>
+            <PropertyRef Name="交易序號" />
+          </Key>
+          <Property Name="交易序號" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="醫療機構名稱" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="就醫帳號" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="手機" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="姓名" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="身分證號碼" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="出生年" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="科別" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="系統別" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="時段" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="金額" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="繳費日期" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="繳費方式" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="信用卡卡號" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="信用卡訂單編號" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="信用卡授權碼" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DemoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pay" EntityType="Self.Pay" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DemoModelStoreContainer" CdmEntityContainer="DemoEntities">
+          <EntitySetMapping Name="Pay">
+            <EntityTypeMapping TypeName="DemoModel.Pay">
+              <MappingFragment StoreEntitySet="Pay">
+                <ScalarProperty Name="交易序號" ColumnName="交易序號" />
+                <ScalarProperty Name="醫療機構名稱" ColumnName="醫療機構名稱" />
+                <ScalarProperty Name="就醫帳號" ColumnName="就醫帳號" />
+                <ScalarProperty Name="手機" ColumnName="手機" />
+                <ScalarProperty Name="姓名" ColumnName="姓名" />
+                <ScalarProperty Name="身分證號碼" ColumnName="身分證號碼" />
+                <ScalarProperty Name="出生年" ColumnName="出生年" />
+                <ScalarProperty Name="科別" ColumnName="科別" />
+                <ScalarProperty Name="系統別" ColumnName="系統別" />
+                <ScalarProperty Name="時段" ColumnName="時段" />
+                <ScalarProperty Name="金額" ColumnName="金額" />
+                <ScalarProperty Name="繳費日期" ColumnName="繳費日期" />
+                <ScalarProperty Name="繳費方式" ColumnName="繳費方式" />
+                <ScalarProperty Name="信用卡卡號" ColumnName="信用卡卡號" />
+                <ScalarProperty Name="信用卡訂單編號" ColumnName="信用卡訂單編號" />
+                <ScalarProperty Name="信用卡授權碼" ColumnName="信用卡授權碼" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Pay">
+    <Key>
+      <PropertyRef Name="交易序號" />
+    </Key>
+    <Property Name="交易序號" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="醫療機構名稱" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="就醫帳號" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="手機" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="姓名" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="身分證號碼" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="出生年" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="科別" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="系統別" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="時段" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="金額" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="繳費日期" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="繳費方式" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="信用卡卡號" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="信用卡訂單編號" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="信用卡授權碼" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DemoModelStoreContainer">
+    <EntitySet Name="Pay" EntityType="Self.Pay" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,138 @@
+﻿@model WebApplication27.Models.Pay
+
+@{
+    ViewBag.Title = "查詢";
+    Layout = "~/Views/Shared/_LayoutDemo.cshtml";
+}
+
+<h2>清單</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.醫療機構名稱)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.醫療機構名稱)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.就醫帳號)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.就醫帳號)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.手機)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.手機)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.姓名)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.姓名)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.身分證號碼)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.身分證號碼)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.出生年)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.出生年)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.科別)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.科別)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.系統別)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.系統別)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.時段)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.時段)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.金額)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.金額)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.繳費日期)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.繳費日期)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.繳費方式)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.繳費方式)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.信用卡卡號)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.信用卡卡號)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.信用卡訂單編號)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.信用卡訂單編號)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.信用卡授權碼)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.信用卡授權碼)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("編輯", "Edit", new { id = Model.交易序號 }, new { @class = "btn btn-warning" }) |
+    @Html.ActionLink("清單", "Index",null, new { @class = "btn btn-info" })
+</p>

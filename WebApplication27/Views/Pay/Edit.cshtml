@@ -1,0 +1,149 @@
+﻿@model WebApplication27.Models.Pay
+
+@{
+    ViewBag.Title = "編輯";
+    Layout = "~/Views/Shared/_LayoutDemo.cshtml";
+}
+
+<h2>編輯</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.交易序號)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.醫療機構名稱, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.醫療機構名稱, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.醫療機構名稱, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.就醫帳號, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.就醫帳號, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.就醫帳號, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.手機, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.手機, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.手機, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.姓名, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.姓名, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.姓名, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.身分證號碼, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.身分證號碼, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.身分證號碼, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.出生年, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.出生年, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.出生年, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.科別, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.科別, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.科別, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.系統別, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.系統別, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.系統別, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.時段, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.時段, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.時段, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.金額, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.金額, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.金額, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.繳費日期, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.繳費日期, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.繳費日期, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.繳費方式, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.繳費方式, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.繳費方式, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.信用卡卡號, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.信用卡卡號, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.信用卡卡號, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.信用卡訂單編號, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.信用卡訂單編號, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.信用卡訂單編號, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.信用卡授權碼, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.信用卡授權碼, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.信用卡授權碼, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="儲存" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("清單", "Index", null, new { @class = "btn btn-default" })
+</div>

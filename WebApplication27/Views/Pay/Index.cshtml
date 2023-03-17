@@ -1,0 +1,122 @@
+﻿@model IEnumerable<WebApplication27.Models.Pay>
+
+@{
+    ViewBag.Title = "清單";
+    Layout = "~/Views/Shared/_LayoutDemo.cshtml";
+}
+
+<h2>清單</h2>
+
+<p>
+    @Html.ActionLink("新增", "Create", null, new { @class = "btn btn-info" })
+</p>
+<div style="overflow-x:auto;">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.醫療機構名稱)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.就醫帳號)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.手機)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.姓名)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.身分證號碼)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.出生年)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.科別)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.系統別)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.時段)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.金額)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.繳費日期)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.繳費方式)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.信用卡卡號)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.信用卡訂單編號)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.信用卡授權碼)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.醫療機構名稱)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.就醫帳號)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.手機)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.姓名)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.身分證號碼)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.出生年)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.科別)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.系統別)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.時段)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.金額)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.繳費日期)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.繳費方式)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.信用卡卡號)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.信用卡訂單編號)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.信用卡授權碼)
+                </td>
+                <td>
+                    @Html.ActionLink("編輯", "Edit", new { id = item.交易序號 }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("細項", "Details", new { id = item.交易序號 }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("刪除", "Delete", new { id = item.交易序號 }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
